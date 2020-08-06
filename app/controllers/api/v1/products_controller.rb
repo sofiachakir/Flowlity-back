@@ -7,7 +7,7 @@ module Api::V1
 
 	  def show
 	  	@product = Product.find(params[:id])
-	  	render json: @product
+	  	render json: @product.inventory_levels_data
 	  end
 	end
 end
