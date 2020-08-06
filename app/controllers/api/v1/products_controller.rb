@@ -1,13 +1,9 @@
 module Api::V1
 	class ProductsController < ApplicationController
+		# Get /api/v1/products
 	  def index
 	  	@products = Product.all
 	  	render json: @products
-	  end
-
-	  def show
-	  	@product = Product.find(params[:id])
-	  	render json: @product.inventory_levels_data
 	  end
 	end
 end
